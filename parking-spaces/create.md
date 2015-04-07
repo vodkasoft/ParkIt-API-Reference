@@ -1,6 +1,7 @@
 # create
 
 Creates a parking space.
+The initial state of the parking space if `vacant`.
 
 ## HTTP Request
 
@@ -30,7 +31,6 @@ following properties:
 | reserved            | boolean   | Whether the parking space is marked as reserved or not.                        |
 | sensor.id           | string    | Sensor ID. Should only be changed when a sensor is replaced.                   |
 | sensor.serialNumber | string    | Serial number of the sensor that is placed at the parking space.               |
-| state               | string    | Current state of the parking space. Can be "vacant", "occupied" or "disabled". |
 
 
 ##### Response
@@ -48,7 +48,6 @@ Host: example.com
 
 {
   "number": "12",
-  "state": "vacant",
   "reserved": false,
   "sensor": {
     "id": "sampleSensorId",
